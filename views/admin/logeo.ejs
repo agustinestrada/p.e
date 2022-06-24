@@ -1,0 +1,21 @@
+<%- include('../partials/head.ejs')  %>
+
+
+<body>
+    <%- include('../partials/header.ejs') %> 
+
+    <form action="/admin" method="POST">
+        <div>
+            <label for="admin">Admin</label>
+            <input type="email" name="admin" required >
+        </div>
+        <div>
+            <label for="password">Password</label>
+            <input type="password" name="password" required>
+        </div>
+        <button type="submit">Log In</button>
+        <button type="reset">Reset</button>
+    </form>
+
+
+</body>

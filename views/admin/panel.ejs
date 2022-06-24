@@ -1,0 +1,29 @@
+<%- include('../partials/head.ejs')  %>
+<link rel="stylesheet" href="/css/panel.css">
+
+<body>
+    <%- include('../partials/header.ejs') %> 
+
+<h1>Admin Panel</h1>
+<a href="/admin/logout">Log Out</a>
+
+
+<a href="/admin/mywork">Upload Work</a>
+
+
+<form action="/admin/resume" method="post" enctype="multipart/form-data">
+    <input type="file" name="resume" id="resume" placeholder="Update your resume">
+    <button type="submit">Update</button>
+    <button type="reset">Reset</button>
+</form>
+
+<% works.forEach(trabajo => { %>
+    <section>
+        <span><%= trabajo.title %> </span><a href="/admin/delete/<%= trabajo.id %>"><i class="fas fa-trash-alt"></i></a><br>
+    </section> 
+<% }) %>
+
+
+
+
+</body>

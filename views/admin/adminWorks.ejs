@@ -1,0 +1,22 @@
+<%- include('../partials/head.ejs') %>
+
+<body>
+    <%- include('../partials/header.ejs') %> 
+    <link rel="shortcut icon">
+    <main>
+        <form class="uploadWork" method="POST" action="/admin/mywork" enctype="multipart/form-data">
+            <input type="text" name="title" id="title" placeholder="Title"><br>
+            <select name="category" id="category">
+                <option value="Select Category">Select Category</option>
+                <option value="character_design">Character Design</option>
+                <option value="personal">Personal Work</option>
+                <option value="animation">Animation</option>
+            </select><br>
+            <textarea id="description" name="description" cols="30" rows="10" placeholder="Description "></textarea><br>
+            <input type="file" id="img" name="img" placeholder="Select your images"><br>
+
+            <input type="submit" value="Upload">
+            <button type="reset">Cancel</button>
+        </form>
+    </main>
+</body>

@@ -1,0 +1,21 @@
+<%- include('../partials/head.ejs')  %>
+
+
+<body>
+    <%- include('../partials/header.ejs') %> 
+
+    <main>
+        <section>
+        <% trabajos.forEach(trabajo => { %>
+            <img src="/img/my_work/<%= trabajo.img %>" alt="">
+            <h3><%= trabajo.title %> </h3><br>
+            <p><%= trabajo.description %> </p>
+        <% }) %>
+   
+        </section>
+
+        
+    </main>
+
+
+</body>

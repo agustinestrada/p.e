@@ -1,0 +1,39 @@
+<%- include('../partials/head.ejs')  %>
+
+
+<body>
+    <%- include('../partials/header.ejs') %> 
+    <link rel="stylesheet" href="/css/contact.css">
+    <main>
+        <section>
+            <form class="contact-form">
+                <div>
+                    <div class="col1">
+                        <input type="text" name="nombre" id="nombre" placeholder="First Name">
+                        <span class="msg-error hidden nombre">El campo de nombre no puede quedar vacio</span>
+                        <input type="text" name="apellido" id="apellido" placeholder="Last Name">
+                        <span class="msg-error hidden apellido">El campo de apellido no puede quedar vacio</span>
+                        <input type="email" name="email" id="email" placeholder="Email">
+                        <span class="msg-error hidden email">El campo de email no puede quedar vacio</span>
+                        <input type="subject" name="subject" id="subject" placeholder="Subject">
+                        <span class="msg-error hidden asunto">El campo de asunto no puede quedar vacio</span>
+                    </div>
+                    <div class="col2">
+                        <textarea id="comment" cols="30" rows="10" placeholder="Please leave your comment"></textarea>
+                        <span class="msg-error hidden comment">El mensaje no puede quedar vacio</span>
+                        
+                    </div>
+                    <div class="col3">
+                        <input type="submit" value="Send" class="submit btn">
+                        <input type="reset" value="Reset" class="submit btn">
+                    </div>        
+                </div>
+                
+            </form>
+            
+        </section>
+        
+        <script src="/js/contact.js"></script>
+
+    </main>
+</body>
